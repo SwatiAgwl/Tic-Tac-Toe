@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100vh;
+    /* background: linear-gradient(to right, #283c86, #45a247);  */
+    background-color:rgb(35, 65, 92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+
+}
+.player{
+    text-align: center;
+    /* border: 2px solid rgba(0, 255, 68, 0.67); */
+    border: 2px solid white; 
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 5px;
+    /* background: #90d8a1; */
+    background-color: rgb(222, 178, 120);
+    color: white;
+    /* text-shadow: 10px 2px 1px rgba(0, 255, 68, 0.67); */
+    text-shadow: 4px 1px 1px black;
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+}
+.playboard{
+    display: grid;
+    width: 90%;
+    max-width: 300px;
+    aspect-ratio: 1/1; /*to make square shape */
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    border: none;
+    padding: 2rem;
+    background-color: rgba(250, 235, 215, 0.27);
+    border-radius: 10px;
+}
+.box{
+    /* background-color: rgba(250, 235, 215, 0.213); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: beige;
+}
+.b1,.b2,.b4,.b5{
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.b7,.b8{
+    border-right: 1px solid black;
+}
+.b3,.b6{
+    border-bottom: 1px solid black;
+}
+.box.win{
+    background: green;
+}
+.new-game{
+    all: unset;
+    background-color: rgb(222, 178, 120);
+    padding: 0.8rem 1.3rem;
+    border: 2px solid white;
+    border-radius: 5px; 
+    font-size: 1.8rem;
+    display: none;
+    color: white;
+    text-shadow: 4px 1px 1px black;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+.new-game.active{
+    display: flex;
+}
